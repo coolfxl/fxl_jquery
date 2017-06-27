@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>AddUserServlet</servlet-name>
+    <servlet-class>com.tz.servlet.AddUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddUserServlet</servlet-name>
+    <url-pattern>/addUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.tz.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>RegiterServlet</servlet-name>
+    <servlet-class>com.tz.servlet.RegiterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegiterServlet</servlet-name>
+    <url-pattern>/regiter</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ProductListServlet</servlet-name>
+    <servlet-class>com.tz.servlet.ProductListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductListServlet</servlet-name>
+    <url-pattern>/prolist</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>AlipayServlet</servlet-name>
+    <servlet-class>com.tz.servlet.AlipayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlipayServlet</servlet-name>
+    <url-pattern>/alipay</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 过滤器 -->
+  <filter>
+  	<description>越权访问控制过滤器</description>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.tz.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/room/*</url-pattern>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <filter>
+  	<description>中文乱码处理过滤器</description>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>com.tz.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>
+
+
+
+
+
+
+
+
+
+

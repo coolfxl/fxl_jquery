@@ -1,0 +1,46 @@
+*{margin:0;padding:0;}
+body{font-size:12px;font-family:"微软雅黑";}
+a{text-decoration:none;}
+ul,li{list-style:none;}
+/*star top*/
+.top{height:70px;}
+.top img{margin:16px 3%;display:block;}
+/*end top*/
+.bg{background:url(../images/bg.jpg) no-repeat center top;width:100%;height:600px;background-size:cover;position:absolute;z-index:-1;}
+/*start box*/
+.box{width:390px;height:350px;border:1px solid #ddd;background:#fff;border-radius:3px;position:absolute;top:200px;right:60px;}
+.box .pt{height:80px;line-height:80px;font-size:16px;font-weight:700;}
+.box .pt a{text-indent:2em;color:#000;display:inline-block;transition:all .6s ease;}
+.box .pt a:first-child{margin-right:2em;}
+.box .pt a:hover{transform:scale(1.6);transition:all .3s ease;}
+.box .login{width:340px;}
+.box .login p{height:46px;margin-bottom:20px;}
+.box .login p input.text{width:340px;height:46px;border:1px solid #ddd;border-radius:3px;text-indent:40px;}
+.box .login p input.user{background:url("../images/user.png") no-repeat 10px center;}
+.box .login p input.pwd{background:url("../images/pwd.png") no-repeat 10px center;}
+.box .login p input.but{width:340px;height:46px;border:0;background:#000;color:#fff;font-size:16px;font-weight:700;cursor:pointer;border-radius:3px;border:0;}
+.box .login p.links{margin-top:28px;height:16px;}
+.box .login .links a{text-decoration:none;color:#666;}
+.box .login .links a:first-child{float:left;}
+.box .login .links a:last-child{float:right;}
+/*end box*/
+#uls li{position:absolute;left:2em;display:none;}
+#uls li.curr{display:block;}
+/*流式判断*/
+@media screen and (max-width:760px){.bg{display:none;}
+	.top img{margin:100px auto;}
+	.box{left:50%;margin-left:-195px;/*此处的负值是宽度的一半*/}
+}
+
+
+
+
+/*检验是否能注册*/
+.suggest_link{color:green}
+.suggest_link_error{color:red}
+
+
+
+
+
+
